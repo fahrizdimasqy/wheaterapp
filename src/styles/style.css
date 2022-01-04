@@ -5,3 +5,9 @@ body {
   width: 50%;
   margin: 0 auto;
 }
+
+@media only screen and (max-width: 780px) {
+  .card {
+    width: 100%;
+  }
+}
