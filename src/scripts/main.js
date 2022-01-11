@@ -18,11 +18,17 @@ function getWeather(city) {
 }
 
 function displayWeather(data) {
+  // destructuring object
   const { name } = data
   const { icon, description } = data.weather[0]
   const { temp, humidity } = data.main
   const { speed } = data.wind
   console.log(name, icon, description, temp, humidity, speed)
   document.querySelector('.city').innerText = name
-  document.querySelector('.city').innerText = name
+  document.querySelector('.temp').innerText = temp + '°C'
+  document.querySelector('.desc').innerText = description
+  document.querySelector('.icon').src =
+    'https://openweathermap.org/img/wn/' + icon + '.png'
 }
+
+getWeather('Sukabumi')
