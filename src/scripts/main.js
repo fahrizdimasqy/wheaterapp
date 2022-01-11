@@ -23,12 +23,29 @@ function displayWeather(data) {
   const { icon, description } = data.weather[0]
   const { temp, humidity } = data.main
   const { speed } = data.wind
-  console.log(name, icon, description, temp, humidity, speed)
-  document.querySelector('.city').innerText = name
-  document.querySelector('.temp').innerText = temp + '°C'
+
+  document.querySelector('.city').innerText = `${name}`
+  document.querySelector('.temp').innerText = `${temp} °C`
   document.querySelector('.desc').innerText = description
   document.querySelector('.icon').src =
     'https://openweathermap.org/img/wn/' + icon + '.png'
+  document.querySelector('.humidity').innerText = `Humadity  ${humidity}%`
 }
+
+function search() {
+  getWeather(document.querySelector('.search-bar').value)
+}
+
+document.querySelector('.search button').addEventListener('click', function () {
+  search()
+})
+
+document
+  .querySelector('.search-bar')
+  .addEventListener('keyup', function (event) {
+    if (event.key === 'Enter') {
+      search()
+    }
+  })
 
 getWeather('Sukabumi')
