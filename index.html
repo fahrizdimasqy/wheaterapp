@@ -12,26 +12,31 @@
     <main>
       <div class="container mt-5">
         <div class="card">
-          <div class="card-body">
+          <div class="card-header">
             <h5>Wheater App</h5>
-            <form>
-              <div class="mb-3 d-flex">
-                <input
-                  type="text"
-                  class="form-control mx-2"
-                  placeholder="Cari Wilayah"
-                />
-                <button type="submit" class="btn btn-primary">Cari</button>
-              </div>
-            </form>
+          </div>
+          <div class="card-body">
+            <div class="search mb-3 d-flex">
+              <input
+                type="text"
+                class="form-control mx-2 search-bar"
+                placeholder="Cari Wilayah"
+              />
+              <button type="submit" class="btn btn-primary">Cari</button>
+            </div>
+
+            <div class="wheather text-center">
+              <h5 class="city"></h5>
+              <h1 class="temp">51</h1>
+              <img src="" alt="" class="icon" />
+              <p class="date">19 January 2022</p>
+              <p class="desc">Cloudy</p>
+            </div>
           </div>
         </div>
       </div>
       <div id="clubList"></div>
     </main>
-    <!-- <script src="src/script/data/clubs.js"></script>
-<script src="src/script/data/data-source.js"></script>
-<script src="src/script/view/main.js"></script>
-<script src="app.js"></script> -->
+    <script src="./src/scripts/main.js"></script>
   </body>
 </html>
